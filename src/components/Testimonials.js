@@ -6,7 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ButtonGroup from "./ButtonGroup";
 
-const Card = ({ star, title, imgSrc }) => {
+const Card = ({ star, title, imgSrc, description, reviewer}) => {
   return (
     <div className="mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all">
       <div className="text-rose-600">
@@ -18,20 +18,18 @@ const Card = ({ star, title, imgSrc }) => {
       </div>
       <h2 className="text-lg font-semibold mb-2">{title}</h2>
       <p className="leading-loose">
-        Get working experience to work with this amazing team & in future want
-        to work together for bright future projects and also make deposit to
-        freelancer.
+     {description}
       </p>
       <div className="flex items-center gap-4 mt-5">
         <Image src={imgSrc} width={50} height={50} alt="testimonials" />
         <div>
-          <h3 className="font-semibold">Naseem Khan</h3>
+          <h3 className="font-semibold">{reviewer}</h3>
           <Link
             href="https://github.com/NaseemKhan005"
             target="_blank"
             className="text-rose-600 font-[500]"
           >
-            @naseemkhan
+            @{reviewer}
           </Link>
         </div>
       </div>
@@ -55,12 +53,16 @@ const Testimonials = () => {
             star={<StarHalfRoundedIcon />}
             title="Modern look & trending design"
             imgSrc="/testimonials/1.png"
+            description = " Math Easy turned my daughter's D's into A's in just one semester. The personalized attention made all the difference!"
+            reviewer="Raj, U.K."
           />
         </div>
         <div>
           <Card
             title="Layout and organized layers"
             imgSrc="/testimonials/2.png"
+            description="As an expat family, we struggled to find tutors who understood the IB curriculum. Math Easy solved that problem beautifully."
+            reviewer="Sarah K., USA "
           />
         </div>
         <div>
@@ -68,6 +70,8 @@ const Testimonials = () => {
             star={<StarRoundedIcon />}
             title="Design Quality & performance"
             imgSrc="/testimonials/3.png"
+            description="The flexible scheduling allowed my son to get help despite the time difference. His confidence in math has soared!"
+            reviewer="Tushar, Australia"
           />
         </div>
         <div>
@@ -75,6 +79,8 @@ const Testimonials = () => {
             star={<StarHalfRoundedIcon />}
             title="Layout and organized layers"
             imgSrc="/testimonials/4.png"
+            description="I never thought I'd say this, but math is now my favorite subject, thanks to Math Easy.."
+            reviewer="Ishaq Ahm, UAE"
           />
         </div>
       </Carousel>

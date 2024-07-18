@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container px-5 md:px-16 flex items-center justify-between mx-auto">
         <Link href={"/"}>
           <h2 className="text-3xl">
-            <span className="text-rose-600">N</span>aseem.
+            <span className="text-rose-600">Math</span>Easy.
           </h2>
         </Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             >
               <CloseOutlinedIcon />
             </button>
-            {["home", "features", "pricing", "testimonial"].map((link) => (
+            {["home", "about","curriculum", "testimonial"].map((link) => (
               <li
                 key={link}
                 className={`${
@@ -99,7 +99,10 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
           <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
-            <Link href={"#pricing"}>Get Started</Link>
+            <Link href={"#pricing"}>Login</Link>
+          </button>
+          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
+            <Link href={"#pricing"}>Sign Up</Link>
           </button>
           <button>
             {theme === "dark" ? (
@@ -121,6 +124,10 @@ const Navbar = () => {
             <MenuIcon />
           </button>
         </div>
+
+
+
+        
       </div>
     </div>
   );

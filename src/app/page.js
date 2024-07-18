@@ -10,21 +10,24 @@ import Subscribe from "@/components/Subscribe";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
+import Carousel from "@/components/Carousel";
+
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-32">
-      <HeroSection />
+      <Carousel />
+      {/* <HeroSection /> */}
       <Features />
       <Services />
       <QualityFeatures />
-      <CoreFeatures />
+      {/* <CoreFeatures /> */}
       <Work />
-      <Pricing />
-      <Team />
+      {/* <Pricing /> */}
+      {/* <Team /> */}
       <Testimonials />
-      <Subscribe />
-      <Community />
+      {/* <Subscribe /> */}
+      {/* <Community /> */}
     </div>
   );
 }
