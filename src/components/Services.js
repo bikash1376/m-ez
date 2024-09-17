@@ -28,7 +28,7 @@ const ServiceCard = ({ imgSrc, title, desc, desc2, desc3 }) => {
 
 const Services = () => {
   return (
-    <section className="relative container px-5 md:px-16 mx-auto">
+    <section className="relative container px-5 md:px-16 mx-auto" id="about">
       <div className="flex gap-10 items-center flex-col-reverse lg:flex-row">
         <div className="relative w-full flex-1">
           <Image
@@ -39,7 +39,7 @@ const Services = () => {
             className="object-cover w-full"
           />
           <button className="w-32 h-32 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Link href={"https://youtu.be/aVNa8Dka5MA"} target="_blank">
+            <Link href={"https://youtube.com"} target="_blank">
               <span className="playButton duration-700 w-full h-full bg-rose-500 rounded-full block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
               <PlayArrowIcon className="w-16 h-16 md:w-24 md:h-24 text-white bg-[#ffffffb8] rounded-full" />
             </Link>
@@ -62,8 +62,8 @@ const Services = () => {
             desc3="At Math Easy, we're not just teaching math - we're building confidence, problem-solving skills, and a foundation for future success."
             
           />
-          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-2 sm:px-4 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
-            <Link href={"/about-us"}>Discover Our Story</Link>
+          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-2 sm:px-4 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full hover:transition-all">
+            <Link href={"/"}>Discover Our Story</Link>
           </button>
 
           {/* <ServiceCard

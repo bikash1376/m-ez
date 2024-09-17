@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <div className="flex mt-8 space-x-6">
               <Link
-                href="https://www.linkedin.com/in/naseem-khan-275275258/"
+                href="https://www.linkedin.com/in/"
                 target="_blank"
               >
                 <LinkedInIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
@@ -28,7 +28,7 @@ const Footer = () => {
 
           <div className="grid gap-8 lg:col-span-2 grid-cols-2 md:grid-cols-4">
             <div>
-              <p className="font-medium">Links</p>
+              {/* <p className="font-medium">Links</p> */}
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
                 <Link
                   href="/"
@@ -37,28 +37,28 @@ const Footer = () => {
                   Home
                 </Link>
                 <Link
-                  href="/why-choose-math-easy"
+                  href="#why-choose-us"
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Why Choose Math Easy
                 </Link>
                 <Link
-                  href="/about-math-easy"
+                  href="#about"
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   About Math Easy
                 </Link>
                 <Link
-                  href="/curriculum"
+                  href="#curriculum"
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Curriculum
                 </Link>
                 <Link
-                  href="/reviews"
+                  href="#testimonials"
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
-                  Reviews
+                  Testimonials
                 </Link>
               </nav>
             </div>
