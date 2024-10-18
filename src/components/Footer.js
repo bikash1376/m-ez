@@ -13,16 +13,9 @@ const Footer = () => {
               <span className="text-rose-600">Math</span>Easy.
             </Link>
             <p className="max-w-xs mt-4 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-              accusantium.
-            </p>
+  Empowering students worldwide with personalized math tutoring. Join us to make math easy and enjoyable for everyone.
+</p>
             <div className="flex mt-8 space-x-6">
-              <Link
-                href="https://www.linkedin.com/in/"
-                target="_blank"
-              >
-                <LinkedInIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
-              </Link>
             </div>
           </div>
 

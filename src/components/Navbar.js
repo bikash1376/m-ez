@@ -3,10 +3,6 @@
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
@@ -20,8 +16,8 @@ const Navbar = () => {
   const navbar = useRef();
 
   useEffect(() => {
+    setMounted(true);
     window.onscroll = () => {
-      setMounted(true);
       if (window.pageYOffset >= 200) {
         navbar.current.classList.add("shadow");
       } else {
@@ -29,6 +25,8 @@ const Navbar = () => {
       }
     };
   }, []);
+
+  if (!mounted) return null; // Ensures theme is only applied after mounting
 
   return (
     <div
@@ -60,7 +58,7 @@ const Navbar = () => {
             >
               <CloseOutlinedIcon />
             </button>
-            {["home", "about","curriculum", "testimonials"].map((link) => (
+            {["home", "about", "curriculum", "testimonials"].map((link) => (
               <li
                 key={link}
                 className={`${
@@ -71,38 +69,15 @@ const Navbar = () => {
                 <Link href={`#${link}`}>{link}</Link>
               </li>
             ))}
-            <div className="md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3">
-              <Link
-                href="https://www.facebook.com/profile.php?id=100017192357822&sk"
-                target="_blank"
-              >
-                <FacebookOutlinedIcon className="cursor-pointer hover:text-rose-600 text-xl" />
-              </Link>
-              <Link
-                target="_blank"
-                href={"https://www.linkedin.com/in/naseem-khan-275275258/"}
-              >
-                <LinkedInIcon className="cursor-pointer hover:text-rose-600 text-xl" />
-              </Link>
-              <Link target="_blank" href={"https://github.com/NaseemKhan005/"}>
-                <GitHubIcon className="cursor-pointer hover:text-rose-600 text-xl" />
-              </Link>
-              <Link
-                target="_blank"
-                href={"https://www.instagram.com/naseem_khan005/"}
-              >
-                <InstagramIcon className="cursor-pointer hover:text-rose-600 text-xl" />
-              </Link>
-            </div>
           </ul>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
           <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
-            <Link href={"#pricing"}>Login</Link>
+            <Link href="/login">Login</Link>
           </button>
-          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
-            <Link href={"#pricing"}>Sign Up</Link>
+          <button className="hidden md:block capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
+            <Link href="/signup">Sign Up</Link>
           </button>
           <button>
             {theme === "dark" ? (
@@ -124,10 +99,6 @@ const Navbar = () => {
             <MenuIcon />
           </button>
         </div>
-
-
-
-        
       </div>
     </div>
   );

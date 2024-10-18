@@ -25,7 +25,7 @@ const Card = ({ star, title, imgSrc, description, reviewer}) => {
         <div>
           <h3 className="font-semibold">{reviewer}</h3>
           <Link
-            href="https://github.com/NaseemKhan005"
+            href="/"
             target="_blank"
             className="text-rose-600 font-[500]"
           >
@@ -51,15 +51,15 @@ const Testimonials = () => {
         <div>
           <Card
             star={<StarHalfRoundedIcon />}
-            title="Modern look & trending design"
+            title="Transformative Tutoring Experience"
             imgSrc="/testimonials/1.png"
             description = " Math Easy turned my daughter's D's into A's in just one semester. The personalized attention made all the difference!"
-            reviewer="Raj, U.K."
+            reviewer="Raj, UK"
           />
         </div>
         <div>
           <Card
-            title="Layout and organized layers"
+            title="Seamless Curriculum Support for Expats"
             imgSrc="/testimonials/2.png"
             description="As an expat family, we struggled to find tutors who understood the IB curriculum. Math Easy solved that problem beautifully."
             reviewer="Sarah K., USA "
@@ -68,7 +68,7 @@ const Testimonials = () => {
         <div>
           <Card
             star={<StarRoundedIcon />}
-            title="Design Quality & performance"
+            title="Confidence Boost with Flexible Scheduling"
             imgSrc="/testimonials/3.png"
             description="The flexible scheduling allowed my son to get help despite the time difference. His confidence in math has soared!"
             reviewer="Tushar, Australia"
@@ -77,7 +77,7 @@ const Testimonials = () => {
         <div>
           <Card
             star={<StarHalfRoundedIcon />}
-            title="Layout and organized layers"
+            title="Math Made Fun and Engaging"
             imgSrc="/testimonials/4.png"
             description="I never thought I'd say this, but math is now my favorite subject, thanks to Math Easy.."
             reviewer="Ishaq Ahm, UAE"
