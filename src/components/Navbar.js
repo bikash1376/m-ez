@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -28,6 +29,13 @@ const Navbar = () => {
 
   if (!mounted) return null; // Ensures theme is only applied after mounting
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       ref={navbar}
@@ -36,7 +44,7 @@ const Navbar = () => {
       } w-full z-50 fixed top-0 left-0 py-4 mb-10`}
     >
       <div className="container px-5 md:px-16 flex items-center justify-between mx-auto">
-        <Link href={"/"}>
+        <Link href="/">
           <h2 className="text-3xl">
             <span className="text-rose-600">Math</span>Easy.
           </h2>
@@ -64,9 +72,12 @@ const Navbar = () => {
                 className={`${
                   selectedItem === link ? "text-rose-600" : ""
                 } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600`}
-                onClick={() => setSelectedItem(link)}
+                onClick={() => {
+                  setSelectedItem(link);
+                  handleScroll(link);
+                }}
               >
-                <Link href={`#${link}`}>{link}</Link>
+                <a href={`/#${link}`}>{link}</a>
               </li>
             ))}
           </ul>
